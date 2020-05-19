@@ -202,7 +202,7 @@ public class Main {
         // Create a variable for the connection string.
         String url = "database-1.cbjmpwcdjfmq.us-east-1.rds.amazonaws.com:1433"; // should pull from AWS Secrets Manager, environment variable, Properties class (key, value pairs)
         String connectionUrl =
-                String.format("jdbc:sqlserver://%s;databaseName=robinson;user=admin;password=", url);
+                String.format("jdbc:sqlserver://%s;databaseName=yourLastName;user=admin;password=enterhere", url);
 
         try (Connection con = DriverManager.getConnection(connectionUrl); // Autoclosable
             Statement stmt = con.createStatement();) {
